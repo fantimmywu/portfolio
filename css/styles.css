@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+* {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h3, h4, h5, h6, span{
+    color: #242424;
+    text-align: center;
+    line-height: 1.25;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.container {
+    padding-bottom: 50px;
+}
+
+.row {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    padding-top: 70px;
+}
+
+.section__title {
+    margin-bottom: 1rem;
+}
+
+section:nth-child(even){
+    background-color: #f9f9f9;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #b26fc7;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #9a60ac;
+    transform: translateY(-5px);
+}
+
+.back-to-top:focus {
+    outline: none;
+}
+
+/* Nav bar */
+nav {
+    display: flex;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 60px;
+}
+
+.nav__link--list {
+    display: flex;
+    padding: 10px 0;
+    font-size: 16px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav__link--anchor{
+    margin: 0 12px;
+    color: #242424;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav__link--anchor.active {
+    border-bottom: 2px solid #000000;
+    color: #b26fc7;
+    padding-bottom: 3px;
+}
+
+.nav__link--anchor:hover {
+    color: #b26fc7;
+}
+
+.personal__logo {
+    font-size: 24px;
+    color: #242424;
+    margin: 0 12px;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+/* About Me */
+
+#about-me {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me__info--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.about-me__picture--mask {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+    margin-bottom: 24px;
+}
+
+.about-me__picture {
+    width: 100%;
+}
+
+.about-me__info--title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.about-me__info--para {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.about-me__link {
+    font-size: 40px;
+    color: #b4a2ae;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+.about-me__link:hover {
+    color: #9a60ac;
+}
+
+/* Languages & Tools */
+/* Images from https://ileriayo.github.io/markdown-badges/ */
+.language__img {
+    width: 100%;
+    max-width: 100px;
+}
+
+.language__img--wrapper {
+    display: inline;
+    margin-right: .4rem;
+}
+
+.language__list {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Projects */
+.project__title {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.project__description {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.project__links {
+    display: flex;
+}
+
+.project__links--description {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project__links .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #b4a2ae;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transition: background-color 300ms ease;
+}
+
+.project__links .icon:hover {
+    background-color: #9a60ac;
+    color: white;
+}
+
+/* Interests */
+.interest {
+    margin-bottom: 2rem;
+}
+
+.interest__description {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.contact__info {
+    text-align: center;
+}
+
+.contact__item {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.contact__link {
+    color: #b26fc7;
+    text-decoration: underline;
+}
+
+.contact__link:hover {
+    text-decoration: underline;
+}
+
+.contact__phone {
+    color: #242424;
+}
+
+.contact__social {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.contact__social-link {
+    display: inline-block;
+    font-size: 32px;
+    margin: 0.5rem;
+    color: #b4a2ae;
+    text-decoration: none;
+}
+
+.contact__social-link:hover {
+    color: #9a60ac;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-top: 70px;
+    }
+
+    nav {
+        padding: 0 15px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        height: 60px;
+    }
+    
+    .nav__link--list {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .nav__link--anchor:hover {
+        color: inherit;
+    }
+    
+    .nav__link--anchor.active {
+        border-bottom: 2px solid #000000;
+        color: #b26fc7;
+        padding-bottom: 3px;
+    }
+    
+    .nav__link--anchor::after {
+        display: none;
+    }
+
+    .nav__link--anchor {
+        margin: 0;
+    }
+
+    .personal__logo {
+        display: none;
+    }
+
+    .about-me__info--container {
+        padding: 20px;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project__links {
+        flex-direction: column;
+    }
+
+    .about-me__info--para {
+        font-size: 18px;
+    }
+
+    .back-to-top {
+        display: none;
+    }
+}
